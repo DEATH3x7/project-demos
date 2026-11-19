@@ -265,12 +265,41 @@ footer { max-width: 1540px; margin: 0 auto; padding: 20px 34px 34px; border-top:
 
     <section class="summary-grid" id="summaryGrid" aria-label="Evaluation summary"></section>
 
-    <nav class="section-nav" aria-label="Page sections"><a href="#studio">01 Figure Studio</a><a href="#comparison">02 Comparison table</a><a href="#definitions">03 Metric reference</a></nav>
+    <nav class="section-nav" aria-label="Page sections"><a href="#comparison">01 Comparison table</a><a href="#studio">02 Figure Studio</a><a href="#definitions">03 Metric reference</a></nav>
+
+    <section class="section" id="comparison">
+      <div class="section-heading">
+        <div>
+          <span class="section-number">01</span>
+          <h2>Full metric comparison</h2>
+          <p>Metrics are rows and agents are columns. Hover over a value for counts, confidence intervals, and reasons for NA.</p>
+        </div>
+        <div class="table-tools">
+          <label>Metric group
+            <select id="tableGroup">
+              <option value="all">All metrics</option>
+              <option value="core">Core metrics</option>
+              <option value="comprehensive">Additional metrics</option>
+            </select>
+          </label>
+          <label>Search metrics
+            <input id="metricSearch" type="search" placeholder="Diagnosis, risk, coverage...">
+          </label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="metricsTable">
+          <thead id="metricsHead"></thead>
+          <tbody id="metricsBody"></tbody>
+        </table>
+      </div>
+      <p class="footnote">Higher is better (up arrow); lower is better (down arrow). Best values are highlighted only when at least two available values differ.</p>
+    </section>
 
     <section class="section" id="studio">
       <div class="section-heading compact">
         <div>
-          <span class="section-number">01</span>
+          <span class="section-number">02</span>
           <h2>Figure Studio</h2>
           <p>Select metrics, agents, and a chart; adjust its style; export SVG, PNG, CSV, or a chart configuration.</p>
         </div>
@@ -381,35 +410,6 @@ footer { max-width: 1540px; margin: 0 auto; padding: 20px 34px 34px; border-top:
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="comparison">
-      <div class="section-heading">
-        <div>
-          <span class="section-number">02</span>
-          <h2>Full metric comparison</h2>
-          <p>Metrics are rows and agents are columns. Hover over a value for counts, confidence intervals, and reasons for NA.</p>
-        </div>
-        <div class="table-tools">
-          <label>Metric group
-            <select id="tableGroup">
-              <option value="all">All metrics</option>
-              <option value="core">Core metrics</option>
-              <option value="comprehensive">Additional metrics</option>
-            </select>
-          </label>
-          <label>Search metrics
-            <input id="metricSearch" type="search" placeholder="Diagnosis, risk, coverage...">
-          </label>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <table id="metricsTable">
-          <thead id="metricsHead"></thead>
-          <tbody id="metricsBody"></tbody>
-        </table>
-      </div>
-      <p class="footnote">Higher is better (up arrow); lower is better (down arrow). Best values are highlighted only when at least two available values differ.</p>
     </section>
 
     <section class="section" id="definitions">

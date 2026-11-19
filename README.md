@@ -1,4 +1,4 @@
-# Xun Wang - Selected Computational Projects
+# BGI成果展示
 
 Two browser-based project demonstrations:
 

@@ -232,12 +232,14 @@ footer { max-width: 1540px; margin: 0 auto; padding: 20px 34px 34px; border-top:
 .definition-card{overflow-wrap:anywhere}.chart-advice{font-size:12px}.control-title{letter-spacing:.02em}
 @media(max-width:760px){.project-intro{grid-template-columns:1fr;gap:12px}.status-note{margin-left:0}.header-actions{flex-wrap:wrap}}
 </style>
+<link rel="stylesheet" href="project-layout.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+  <nav class="project-nav" aria-label="Project navigation"><a href="./">All projects</a></nav>
   <header class="topbar">
     <div class="brand-block">
-      <div class="eyebrow">PROJECT DEMO · CLINICAL DATA AND AGENT EVALUATION</div><a href="./" style="display:inline-block;margin-top:10px;font-size:14px;color:#0b6f69">All projects</a>
+      <div class="eyebrow">PROJECT DEMO · CLINICAL DATA AND AGENT EVALUATION</div>
       <h1 id="pageTitle">Prenatal-Diagnosis Agent Evaluation Workbench</h1>
       <p id="datasetSubtitle">Explore structured evaluation results, compare agents, and export editable figures.</p>
     </div>
@@ -257,6 +259,7 @@ footer { max-width: 1540px; margin: 0 auto; padding: 20px 34px 34px; border-top:
       <a href="#studio" class="button primary">Explore Figure Studio</a></div>
     </section>
 
+<section class="workflow-section" aria-label="Evaluation workflow"><h2>Evaluation workflow</h2><p>From case-aligned inputs to evidence-linked scores, validated metrics, and reports.</p><figure><div class="workflow-scroll"><img src="evaluation-workflow.svg" alt="Evaluation workflow: case inputs, three evaluation modules, aggregation, and outputs"/></div><figcaption>LLM-based judgments follow the scoring rules. Python scripts prepare inputs, validate structured judgments, aggregate metrics, and generate reports. The interactive workbench below displays prepared results.</figcaption></figure><details><summary>View diagram at full size</summary><a href="evaluation-workflow.svg" target="_blank" rel="noopener">Open workflow diagram</a></details></section>
     <section class="status-strip" aria-label="Dataset status">
       <span class="status-dot" aria-hidden="true"></span>
       <strong id="datasetStatus">Illustrative data</strong>
@@ -1869,4 +1872,5 @@ footer { max-width: 1540px; margin: 0 auto; padding: 20px 34px 34px; border-top:
 </script>
 </body>
 </html>
+
 

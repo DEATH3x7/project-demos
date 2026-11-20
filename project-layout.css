@@ -18,3 +18,41 @@ header.topbar,body>header{max-width:1480px;padding-top:20px}
 .output-selection{margin:14px 0 0;padding:12px 16px;border:1px solid #d7e2de;background:#f2f7f5;font-size:14px;color:#526a65}
 @media(max-width:1100px){.workspace{grid-template-columns:1fr 1fr}.workspace>.panel:first-child{grid-column:1/-1}.workspace .tablewrap{max-height:360px}}
 @media(max-width:700px){.project-nav{padding:20px 18px 0}header.topbar,body>header{padding-left:18px;padding-right:18px}.workflow-section{padding:16px}.workspace{grid-template-columns:1fr}.workspace>.panel:first-child{grid-column:auto}}
+
+/* Consistent page edges and workflow typography. */
+:root{--project-width:1480px;--project-gutter:36px}
+body>.project-nav,body>header,body>header.topbar,body>main,body>footer{
+  box-sizing:border-box;width:100%;max-width:var(--project-width);margin-left:auto;margin-right:auto;
+  padding-left:var(--project-gutter);padding-right:var(--project-gutter)
+}
+.workflow-section{padding:28px 32px}
+.workflow-section h2,.workflow-section>p,.workflow-section figure{
+  width:100%;max-width:1080px;margin-left:auto;margin-right:auto;text-align:left
+}
+.workflow-section h2{font-size:24px;line-height:1.35;margin-top:0;margin-bottom:12px}
+.workflow-section>p,.workflow-section figcaption{
+  font-size:16px;line-height:1.65;color:#526a65;text-align:left;font-weight:400
+}
+.workflow-section>p{margin-top:0;margin-bottom:16px}
+.workflow-section figure{margin-top:24px;margin-bottom:0}
+.workflow-section img{max-width:none}
+.workflow-section figcaption{margin-top:20px;margin-bottom:0}
+.workflow-section>figure+p{margin-top:16px;margin-bottom:0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.stats .stat,.stats .stat:first-child,.stats .stat:nth-child(3){
+  min-width:0;padding:18px 20px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+  border:0;border-right:1px solid #d7e2de;text-align:left
+}
+.stats .stat:last-child{border-right:0}
+.stats .stat b{font-size:28px;line-height:1.2;margin:0 0 8px}
+.stats .stat span{font-size:14px;line-height:1.5;margin:0}
+@media(max-width:700px){
+  :root{--project-gutter:18px}
+  .workflow-section{padding:20px 16px}
+  .workflow-section h2{font-size:22px}
+}
+@media(max-width:620px){
+  .stats{grid-template-columns:1fr}
+  .stats .stat,.stats .stat:first-child,.stats .stat:nth-child(3){padding:16px 20px;border-right:0;border-bottom:1px solid #d7e2de}
+  .stats .stat:last-child{border-bottom:0}
+}
